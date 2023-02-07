@@ -40,7 +40,44 @@ class Rectangle:
         self.color = color
 
 
+class Bird:
+    names = ("mouette", "pigeon", "moineau", "hirrondelle")
+    positions={}
+    """un oiseau"""
+    def __init__(self,name) :
+        """les attributs definis ici sont des attributs d'instance """
+        self.wings=2 
+        self.position=1,2
+        self.name=name
+
+        self.positions[self.position]=self.name
+
+
+    @classmethod
+    def find_bird(cls,position):
+        """retrouve un oiseau selon sa position"""
+        if position in cls.positions:
+            return f"On a trouvé un {cls.positions[position]}"
+        return "On a rien trouvé"
+
+
+# bird=Bird()
+# print(bird.wings)
+
+
+
+
 rect1 = Rectangle(4, 2, color="blue")
 
 rectangle=Rectangle(10,12)
 print(rectangle.color)
+
+rectangle.color="yellow"
+print(rectangle.color)
+
+print(Bird.names[1])
+Bird.names 
+Bird.positions
+bird = Bird("hirronde")
+print(Bird.find_bird((1,2)))
+print(Bird.find_bird((2, 5)))
