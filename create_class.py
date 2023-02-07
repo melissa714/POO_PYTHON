@@ -23,9 +23,6 @@ print(cake.cut_in_part("vert"))
 
 
 
-
-
-
 class Student:
     def __init__(self,name,roll_num,marks):
         self.name=name 
