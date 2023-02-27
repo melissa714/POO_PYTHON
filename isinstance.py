@@ -25,34 +25,30 @@ class SmartPhone(Phone):
         self.internal_memory = internal_memory
         self.rare_camera = rare_camera
 
-
         self.rare_camera = rare_camera
 
 
 class FlagShip(SmartPhone):
-    def __init__(self, brand, model_name, price, ram, internal_memory, rare_camera,front_camera):
+    def __init__(self, brand, model_name, price, ram, internal_memory, rare_camera, front_camera):
         super().__init__(brand, model_name, price, ram, internal_memory, rare_camera)
         """Herite des attributs de la classe Phone"""
         # Phone.__init__(self,brand,model_name,price)
         self.front_camera = front_camera
 
 
-
 phone1 = Phone('Nokia', '1100', 40000)
-# print(phone1.price)
-# print(phone1.full_name())
+print(phone1.price)
+print(phone1.full_name())
 
 smartphone1 = SmartPhone('samsung', 'A7', 60000, '4GB', '128GB', '25MP')
-smart = FlagShip('Nasco', 'A7', 80000, '4GB', '128GB', '25MP','45MP')
-# print(smart.__dict__)
-# print(smart.price)
+smart = FlagShip('Nasco', 'A7', 80000, '4GB', '128GB', '25MP', '45MP')
+print(smart.__dict__)
+print(smart.price)
 
-Phone_3310=Phone('Nokia','3310',3000)
-smartphone_A7 = SmartPhone('samsung', 'A7', 60000, '4GB', '128GB', '25MP')
-FlagShip_onePlus = FlagShip('Nasco', 'A7', 80000, '4GB', '128GB', '25MP', '45MP')
+print(smartphone1.price)
 
-print(isinstance(Phone_3310,Phone))
 
-print(isinstance(phone1,Phone))
+print(smartphone1.full_name())
+print(smart.full_name())
 
-print(isinstance(Phone_3310,SmartPhone))
+help(SmartPhone)
